@@ -1,6 +1,6 @@
 -- question 1 
-select c.customer_id, sum(c2.price) from public.customer c 
-inner join public.transaction_table tt 
+select c.customer_id, coalesce(sum(c2.price),0) from public.customer c 
+left join public.transaction_table tt 
 on c.customer_id = tt.customer_id  
 left join public.car c2 
 on c2.car_id = tt.car_id 
