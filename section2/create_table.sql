@@ -11,6 +11,7 @@ create table if not exists public.customer (
     customer_id int not null,
     customer_name varchar(50) not null,
     customer_phone varchar(50) not null,
+    transaction_id int not null,
     PRIMARY KEY (customer_id)
 );
 
