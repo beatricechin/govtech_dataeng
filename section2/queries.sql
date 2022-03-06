@@ -27,3 +27,4 @@ on c.car_id = m.car_id
 where c.sold_dt >= date_trunc('month', CURRENT_DATE)
 group by m.manufacturer_name 
 order by sales_number desc
+limit 3
